@@ -11,7 +11,7 @@ public class Main {
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
 
-        
+        Pattern1();
 
     }
 
@@ -37,8 +37,19 @@ public class Main {
         int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
         return number;
     }
-
-
-
+    public static void Pattern1(){
+        for (int rows = 0; rows < 6; rows++){
+            for(int column = 0; column < 6; column++){
+                System.out.print("*");
 
 }
+System.out.println();
+            }
+
+        }
+
+    }
+
+
+
+

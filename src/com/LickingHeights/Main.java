@@ -10,10 +10,12 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-
+        System.out.println("The sum of the array is "+sum(array));
         Pattern1();
         Pattern2();
         Pattern3();
+        Pattern4();
+        Pattern5();
     }
 
     public static int[] createNumberArray(int size, int lowestNumber, int highestNumber) {
@@ -38,39 +40,65 @@ public class Main {
         int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
         return number;
     }
-    public static void Pattern1(){
-        for (int rows = 0; rows < 6; rows++){
-            for(int column = 0; column < 6; column++){
+
+    public static void Pattern1() {
+        for (int rows = 0; rows < 6; rows++) {
+            for (int column = 0; column < 6; column++) {
                 System.out.print("*");
 
-}
-System.out.println();
             }
-
+            System.out.println();
         }
-        public static void Pattern2(){
-        for (int rows = 1; rows<7; rows++){
-            for(int column = 1; column<8; column++) {
+
+    }
+
+    public static void Pattern2() {
+        for (int rows = 1; rows < 7; rows++) {
+            for (int column = 1; column < 8; column++) {
                 System.out.print(rows);
             }
             System.out.println();
         }
 
 
-        }
-        public static void Pattern3(){
+    }
 
-        for (int rows = 1; rows<7; rows++){
-            for(int column = 1; column<7; column++) {
+    public static void Pattern3() {
+
+        for (int rows = 1; rows < 7; rows++) {
+            for (int column = 1; column < 7; column++) {
                 System.out.print(column);
-                    }
-                    System.out.println();
-                }
-
-
+            }
+            System.out.println();
         }
+
 
     }
+
+    public static void Pattern4() {
+        for (int rows = 6; rows > 0; rows--) {
+            for (int column = rows; column < 7; column++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void Pattern5() {
+        for (int rows = 1; rows < 7; rows++) {
+            for (int column =1; column <= rows ; column++) {
+                System.out.print(column);
+            }
+            System.out.println();
+        }
+    }
+    public static int sum(int array[]){
+        int sum = 0;
+        for(int i = 0; i<array.length; i++)
+        sum += array[i];
+
+        return sum;
+    }
+}
 
 
 

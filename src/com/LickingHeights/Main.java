@@ -1,5 +1,7 @@
 package com.LickingHeights;
 
+import com.sun.org.apache.bcel.internal.generic.SWAP;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,9 +13,12 @@ public class Main {
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
         printArray(array);
-        System.out.println("The sum of the array is "+sum(array));
-        System.out.println("The minimum of the array is "+min(array));
-        System.out.println("The maximum of the array is "+max(array));
+        System.out.println("The sum of the array is " + sum(array));
+        System.out.println("The minimum of the array is " + min(array));
+        System.out.println("The maximum of the array is " + max(array));
+        bubbleSort(array);
+        System.out.println("After Bubble Sort");
+        printArray(array);
 //        Pattern1();
 //        Pattern2();
 //        Pattern3();
@@ -87,24 +92,27 @@ public class Main {
             System.out.println();
         }
     }
+
     public static void Pattern5() {
         for (int rows = 1; rows < 7; rows++) {
-            for (int column =1; column <= rows ; column++) {
+            for (int column = 1; column <= rows; column++) {
                 System.out.print(column);
             }
             System.out.println();
         }
     }
-    public static int sum(int[] array){
+
+    public static int sum(int[] array) {
         int sum = 0;
-        for(int i = 0; i<array.length; i++)
-        sum += array[i];
+        for (int i = 0; i < array.length; i++)
+            sum += array[i];
 
         return sum;
     }
-    public static int min(int[] array){
+
+    public static int min(int[] array) {
         int min = array[0];
-        for(int i = 1; i<array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (min > array[i]) {
                 min = array[i];
             }
@@ -114,6 +122,7 @@ public class Main {
 
 
     }
+
     public static int max(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -124,4 +133,30 @@ public class Main {
         }
         return min;
     }
+
+    public static int[] bubbleSort(int[] array) {
+        int i, j, temp;
+
+
+        for (i = 0; i < array.length; i++) {
+            for (j = 0; j<array.length; j++) {
+
+                if (array[i] > array[j]) {
+                    temp = array[j];
+                    array[j] = array[i];
+                    array[i] = temp;
+
+
+                }
+                else{
+                    array[i] = array[i];
+                    array[j] = array[j];
+
+                }
+            }
+        }
+        return array;
+
+    }
+
 }

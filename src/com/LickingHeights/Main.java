@@ -19,13 +19,13 @@ public class Main {
         String[] times = {"Evening","Dusk","Noon","Night"};
         String[] things = {"Worm on a String","Ligature","Album","Jersey"};
 
-       /* printArray(array);
+        printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The minimum of the array is " + min(array));
         System.out.println("The maximum of the array is " + max(array));
         bubbleSort(array);
         System.out.println("After Bubble Sort");
-        printArray(array);*/
+        printArray(array);
 //        Pattern1();
 //        Pattern2();
 //        Pattern3();
@@ -146,7 +146,7 @@ public class Main {
 
 
         for (i = 0; i < array.length; i++) {
-            for (j = 0; j<array.length; j++) {
+            for (j = i+1; j<array.length; j++) {
 
                 if (array[i] > array[j]) {
                     temp = array[j];
@@ -155,11 +155,7 @@ public class Main {
 
 
                 }
-                else{
-                    array[i] = array[i];
-                    array[j] = array[j];
 
-                }
             }
         }
         return array;

@@ -12,13 +12,20 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-        printArray(array);
+        String[] adjectives = {"Silly","tiresome","Lousy","sick"};
+        String[] places = {"Costco","Chuck E Cheese","Licking Heights High school","Utah"};
+        String[] people = {"Xi Jinping","John Lynch","Felix Kjellberg","Corbin Russ"};
+        String[] verbs = {"Lead","Fought","Entertained","Taught"};
+        String[] times = {"Evening","Dusk","Noon","Night"};
+        String[] things = {"Worm on a String","Ligature","Album","Jersey"};
+
+       /* printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The minimum of the array is " + min(array));
         System.out.println("The maximum of the array is " + max(array));
         bubbleSort(array);
         System.out.println("After Bubble Sort");
-        printArray(array);
+        printArray(array);*/
 //        Pattern1();
 //        Pattern2();
 //        Pattern3();

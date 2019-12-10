@@ -2,6 +2,8 @@ package com.LickingHeights;
 
 import com.sun.org.apache.bcel.internal.generic.SWAP;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,14 +20,15 @@ public class Main {
         String[] verbs = {"Lead","Fought","Entertained","Taught"};
         String[] times = {"Evening","Dusk","Noon","Night"};
         String[] things = {"Worm on a String","Ligature","Album","Jersey"};
+        System.out.print("I was "+randomWord(verbs)+" down the "+randomWord(places)+" around "+randomWord(times)+" with my best friend "+randomWord(people)+" and we "+randomWord(verbs)+" a "+randomWord(adjectives)+" " +randomWord(things)+"  that was "+randomWord(verbs)+" "+randomWord(things)+" s.");
 
-        printArray(array);
+       /* printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The minimum of the array is " + min(array));
         System.out.println("The maximum of the array is " + max(array));
         bubbleSort(array);
         System.out.println("After Bubble Sort");
-        printArray(array);
+        printArray(array);*/
 //        Pattern1();
 //        Pattern2();
 //        Pattern3();
@@ -161,5 +164,13 @@ public class Main {
         return array;
 
     }
+/*public static String sentenceGenerator(String[] adjectives, String[] places, String[] people,String[] Verbs, String[] times, String[] things ){
 
+
+
+}*/
+public static String randomWord(String[] array) {
+    Random random = new Random();
+    return array[random.nextInt(array.length)];
+}
 }

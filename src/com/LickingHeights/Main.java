@@ -20,7 +20,15 @@ public class Main {
         String[] verbs = {"Lead","Fought","Entertained","Taught"};
         String[] times = {"Evening","Dusk","Noon","Night"};
         String[] things = {"Worm on a String","Ligature","Album","Jersey"};
-        System.out.print("I was "+randomWord(verbs)+" down the "+randomWord(places)+" around "+randomWord(times)+" with my best friend "+randomWord(people)+" and we "+randomWord(verbs)+" a "+randomWord(adjectives)+" " +randomWord(things)+"  that was "+randomWord(verbs)+" "+randomWord(things)+" s.");
+        String[] name1 = {"lil","Biggie","Sick","Crazy"};
+        String[] name2 = {"Crockpot","Chonk","Buster","Dawg"};
+        String[] name3 = {"Stew","Broke","Russ","Caprisun"};
+        System.out.println(print80sRapperName(name1,name2,name3));
+
+
+
+        System.out.println(sentenceGenerator(adjectives,places,people,verbs,times,things));
+
 
        /* printArray(array);
         System.out.println("The sum of the array is " + sum(array));
@@ -164,13 +172,19 @@ public class Main {
         return array;
 
     }
-/*public static String sentenceGenerator(String[] adjectives, String[] places, String[] people,String[] Verbs, String[] times, String[] things ){
+public static String sentenceGenerator(String[] adjectives, String[] places, String[] people,String[] verbs, String[] times, String[] things ) {
+  return "I was " + randomWord(verbs) + " down the " + randomWord(places) + " around " + randomWord(times) + " with my best friend " + randomWord(people) + " and we " + randomWord(verbs) + " a " + randomWord(adjectives) + " " + randomWord(things) + "  that was " + randomWord(verbs) + " " + randomWord(things) + "s.";
+}
 
 
 
-}*/
 public static String randomWord(String[] array) {
     Random random = new Random();
     return array[random.nextInt(array.length)];
+}
+public static String print80sRapperName(String[] name1,String[] name2,String[] name3){
+        return randomWord(name1)+" "+randomWord(name2)+" "+randomWord(name3);
+
+
 }
 }
